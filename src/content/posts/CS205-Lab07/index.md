@@ -228,7 +228,7 @@ We want to create a dynamic library by function.cpp and call the dynamic library
 
 ![image-20250512172906594](./images/image-20250512172906594.png)
 
-[More detail click here](https://github.com/MongXinChan/SUST-Cpp-course/blob/main/lab07/shared%20library-02/Makefile)
+[More detail click here](https://github.com/MongxinChan/SUST-Cpp-course/blob/main/lab07/shared%20library-02/Makefile)
 
 # Function and Memory
 
@@ -280,7 +280,7 @@ export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 
 ![image-20250512174539920](./images/image-20250512174539920.png)
 
-[You can click here to visit the more detail of the code.](https://github.com/MongXinChan/SUST-Cpp-course/tree/main/lab07)
+[You can click here to visit the more detail of the code.](https://github.com/MongxinChan/SUST-Cpp-course/tree/main/lab07)
 
 > [!TIP]
 >
@@ -328,7 +328,7 @@ Conclude the difference between static library and shared library according to y
 
 
 
-[Click here to visit the implements.](https://github.com/MongXinChan/SUST-Cpp-course/tree/main/lab07/Exe01)
+[Click here to visit the implements.](https://github.com/MongxinChan/SUST-Cpp-course/tree/main/lab07/Exe01)
 
 ## 3.2 Exercise 2
 

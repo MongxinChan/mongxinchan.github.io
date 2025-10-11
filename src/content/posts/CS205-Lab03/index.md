@@ -411,7 +411,7 @@ What is a Makefile?
 
 [If you wanna know more Makefile click here.](https://www.loners.site/posts/makefile/)
 
-And if you wanna know the example you can [click here come to my github repo read this code.](https://github.com/MongXinChan/SUST-Cpp-course/tree/main/lab03/exa02)
+And if you wanna know the example you can [click here come to my github repo read this code.](https://github.com/MongxinChan/SUST-Cpp-course/tree/main/lab03/exa02)
 
 Normally, you can compile these files by the following command:
 

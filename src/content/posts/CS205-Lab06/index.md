@@ -65,7 +65,7 @@ In this part,we focus on the static library.
 
 ## 1.1 build
 
-[You can click here to read the code](https://github.com/MongXinChan/SUST-Cpp-course/tree/main/lab06/lab)
+[You can click here to read the code](https://github.com/MongxinChan/SUST-Cpp-course/tree/main/lab06/lab)
 
 ![image-20250506092331495](./images/image-20250506092331495.png)
 
