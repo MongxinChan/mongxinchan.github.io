@@ -5,7 +5,7 @@ import { getPostUrlBySlug } from "../utils/url-utils";
 // 接收参数：当前文章的标签，以及所有文章的列表
 export let currentTags: string[] = [];
 export let allPosts: any[] = [];
-export let currentSlug: string = "";
+export let currentSlug = "";
 
 // 1. 定义你想要识别为“系列”的关键词
 const seriesKeywords = ["CS61B", "CS205", "408"];
