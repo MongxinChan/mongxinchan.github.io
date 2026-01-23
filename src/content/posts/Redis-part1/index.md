@@ -2,7 +2,7 @@
 title: 'LRU算法与其优化算法'
 description: ''
 image: ''
-tags: [C/CPP, Redis, LRU]
+tags: [Cpp, Redis, LRU]
 category: 'ComputerScience-CN'
 draft: false 
 lang: zh_CN
