@@ -4,23 +4,17 @@
 
 2004年4月生人，目前就读于国内某不知名高校计算机科学与技术专业。
 
-为什么我的博客叫罗德岛？
+:::tip[为什么我的博客叫罗德岛？]
 
 这句话源自《伊索寓言》中的故事《吹牛的跳远者》。故事讲述一个自称在罗德岛创下跳远纪录的人，被当地人戳穿谎言后，对方用这句话回应：“这里就是罗德岛，要跳就在这里跳！”（原文希腊语：αὐτοῦ γὰρ καὶ Ῥόδος καὶ πήδημα）。
 
 对于我而言，这是我自己的罗德岛，我在这里记录我的学习过程，也记录我的生活。
+:::
 
-为什么域名是`loners.site`?
-
+:::tip[为什么域名是`loners.site`?]
 说来也巧合，这个域名是我的朋友移交给我的，又在某种程度上算是“衣钵传承”了。
+:::
 
----
-
-![alt text](https://cdn.jsdelivr.net/gh/MeritXin/img@master/QQ_1769098934116.png)
-
-后文是我朋友看到后，如是说道，我想了想确实`.com`，`.top`，`.cn`，`.love`都比`.site`贵很多23333
-
----
 
 ## 关于本站之前时间内的更新
 
@@ -47,6 +41,11 @@
 
 
 - [Github](https://github.com/mongxinchan)
+
+:::note[后文]
+![alt text](https://cdn.jsdelivr.net/gh/MeritXin/img@master/QQ_1769098934116.png)
+后文是我朋友看到后，如是说道，我想了想确实`.com`，`.top`，`.cn`，`.love`都比`.site`贵很多23333
+:::
 
 ## Sources of images used in this site
 > - [Unsplash](https://unsplash.com/)
