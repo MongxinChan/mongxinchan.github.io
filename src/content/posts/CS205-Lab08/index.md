@@ -4,7 +4,7 @@ published: 2025-05-08
 updated: 2025-05-14
 description: '本实验主要介绍 SIMD（单指令多数据）和 OpenMP 并行编程的基础知识。我们将探讨 Intel 和 ARM 平台上的 SIMD 指令集，学习如何使用 Intrinsics 加速程序，并了解 OpenMP 的基本用法。'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp,Ubuntu,Linux ]
+tags: [Cpp,Linux ]
 category: "System-Dev"
 draft: false 
 lang: en

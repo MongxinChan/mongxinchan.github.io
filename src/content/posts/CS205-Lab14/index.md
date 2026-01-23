@@ -4,7 +4,7 @@ published: 2025-06-25
 updated: 2025-06-26
 description: '本章实验中，将会利用try-catch，thorws的特性来查看抛出异常，我们在调试过程中适当加入try-catch可以有效排除我们的错误。我们在这一讲中会提及assert方法，利用类自定义一个MyException来用e.what()抛出异常，结合模板，这种自定义为我们的程序调试增加了一定的灵活性。'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp,Ubuntu,Linux ]
+tags: [Cpp,Linux ]
 category: "System-Dev"
 draft: false 
 lang: en

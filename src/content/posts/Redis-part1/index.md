@@ -3,7 +3,7 @@ title: 'LRU算法与其优化算法'
 description: ''
 image: ''
 category: "System-Dev"
-tags: [Redis, Algorithm, LRU, System-Design]
+tags: [Redis, Algorithm]
 draft: false 
 lang: zh_CN
 published: 2025-09-30

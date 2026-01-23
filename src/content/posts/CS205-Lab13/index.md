@@ -4,7 +4,7 @@ published: 2025-05-31
 updated: 2025-06-02
 description: '本实验将探讨C++中两种重要的代码组织和复用技术：类的组合和模板。我们将学习如何通过在一个类中包含另一个类的对象来实现组合（“has-a”关系），并理解其构造和析构顺序。随后，我们将深入研究模板，特别是类模板，了解如何创建可用于多种数据类型的通用类。我们还将讨论模板的特化，包括完全特化和部分特化，以及何时选择使用模板而非继承。'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp,Ubuntu,Linux ]
+tags: [Cpp,Linux ]
 category: "System-Dev"
 draft: false 
 lang: en

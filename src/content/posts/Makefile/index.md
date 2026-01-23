@@ -5,7 +5,7 @@ updated: 2024-11-22
 description: 'Makefile带来的好处就是——“自动化编译”，一旦写好，只需要一个Make命令，整个工程完全自动编译，极大的提高了软件开发的效率。make是一个命令工具，是一个解释makefile中指令的命令工具，一般来说，大多数的IDE都有这个命令，比如：Delphi的make，Visual C++的nmake，Linux下GNU的make。可见，Makefile都成为了一种在工程方面的编译方法。'
 image: './img.png'
 category: "System-Dev"
-tags: [Makefile, BuildTools, Linux]
+tags: [BuildTools, Linux]
 draft: false 
 lang: zh_CN
 ---

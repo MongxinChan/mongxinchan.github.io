@@ -4,7 +4,7 @@ published: 2025-04-12
 updated: 2025-04-12
 description: '复盘一下蓝桥杯。'
 image: ''
-tags: [DataStructures, Algorithm, Contest, Cpp]
+tags: [Algorithm,Cpp]
 category: "CS-Basics"
 draft: true 
 lang: zh_CN

@@ -2,7 +2,7 @@
 title: '二语习得——笔记'
 description: ''
 image: ''
-tags: [Linguistic,Cognitive,Theory]
+tags: [Linguistics]
 category: "Philosophy"
 draft: false 
 lang: en
