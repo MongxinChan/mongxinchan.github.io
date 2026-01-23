@@ -1,30 +1,44 @@
 ---
-import ArchivePanel from '@components/ArchivePanel.astro'
-import I18nKey from '@i18n/i18nKey'
-import { i18n } from '@i18n/translation'
-import MainGridLayout from '@layouts/MainGridLayout.astro'
-import { getSortedPosts } from '@utils/content-utils'
+import ArchivePanel from "@components/ArchivePanel.astro";
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { getSortedPosts } from "@utils/content-utils";
 
 export async function getStaticPaths() {
-  const posts = await getSortedPosts()
+    const posts = await getSortedPosts();
 
-  // タグを集めるための Set の型を指定
-  const allTags = posts.reduce<Set<string>>((acc, post) => {
-    // biome-ignore lint/complexity/noForEach: <explanation>
-    post.data.tags.forEach(tag => acc.add(tag))
-    return acc
-  }, new Set())
+    const allTags = posts.reduce<Set<string>>((acc, post) => {
+        for (const tag of post.data.tags) {
+            // 过滤掉空标签，并统一处理斜杠问题
+            if (tag && tag.trim() !== "") {
+                acc.add(tag);
+            }
+        }
+        return acc;
+    }, new Set());
 
-  const allTagsArray = Array.from(allTags)
+    const allTagsArray = Array.from(allTags);
 
-  return allTagsArray.map(tag => ({
-    params: {
-      tag: tag,
-    },
-  }))
+    return allTagsArray.map((tag) => {
+        // 安全处理：将 "C/CPP" 转换为 "C-CPP" 以符合单层路由规则
+        // 这样生成的 URL 将是 /archive/tag/C-CPP
+        const safeTag = tag.replaceAll("/", "-"); 
+        
+        return {
+            params: {
+                tag: safeTag, 
+            },
+            props: {
+                // 传递原始标签名以便在页面上正确显示，或者传递过滤后的文章
+                tagName: tag, 
+                posts: posts.filter(post => post.data.tags.includes(tag))
+            }
+        };
+    });
 }
 
-const tag = Astro.params.tag as string
+const tag = Astro.params.tag as string;
 ---
 
 <MainGridLayout title={i18n(I18nKey.archive)} description={i18n(I18nKey.archive)}>
