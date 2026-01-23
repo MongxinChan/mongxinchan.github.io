@@ -4,7 +4,7 @@ published: 2025-04-22
 updated: 2025-04-23
 description: 'Welcome to my CS205 lecture notes!'
 image: ''
-tags: [Cpp,Linux ]
+tags: [Cpp,Linux,CS205]
 category: "System-Dev"
 draft: false 
 lang: en

@@ -4,7 +4,7 @@ published: 2025-05-07
 updated: 2025-05-12
 description: '本实验将重点介绍共享库（动态链接库）的创建和使用，以及函数在内存中的表示和进程的内存布局。我们将学习如何使用 GCC/G++ 编译器构建 .so 文件，如何在主程序中链接和使用这些共享库，以及如何通过 Makefile 和 CMake 来管理包含共享库的项目。此外，我们还将探讨函数的地址、进程的内存分段以及如何查看进程的内存映射。'
 image: ''
-tags: [Cpp,Linux ]
+tags: [Cpp,Linux,CS205]
 category: "System-Dev"
 draft: false 
 lang: en

@@ -4,7 +4,7 @@ published: 2025-05-21
 updated: 2025-05-30
 description: '本实验旨在帮助学生深入理解和熟练运用 C++ 中的运算符重载 (Operator Overloading) 机制，以及与之相关的类类型转换 (Class Type Conversion)。学生将学习如何为自定义类赋予标准运算符新的含义，使代码更直观易懂，并掌握不同类型间转换的控制方法。'
 image: ''
-tags: [Cpp,Linux ]
+tags: [Cpp,Linux,CS205]
 category: "System-Dev"
 draft: false 
 lang: en

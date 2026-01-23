@@ -4,7 +4,7 @@ published: 2025-04-27
 updated: 2025-04-28
 description: 'CMake作为生成Makefile文件的最佳利器，我们会在这一实验中进行练习，并且穿插一部分输入和存储类型'
 image: ''
-tags: [Cpp,Linux ]
+tags: [Cpp,Linux,CS205]
 category: "System-Dev"
 draft: false 
 lang: en
