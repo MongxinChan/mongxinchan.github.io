@@ -5,7 +5,7 @@ updated: 2024-12-02
 description: 'Welcome to my CS61B lecture notes!'
 image: ''
 tags: [ComputerScience,DataStructures,Java ]
-category: 'ComputerScience-En'
+category: "ComputerScience"
 lang: en
 ---
 >[!TIP]

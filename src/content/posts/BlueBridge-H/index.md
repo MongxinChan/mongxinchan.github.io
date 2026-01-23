@@ -5,7 +5,7 @@ updated: 2025-04-12
 description: '复盘一下蓝桥杯。'
 image: ''
 tags: [ComputerScience,DataStructures,Cpp ]
-category: 'ComputerScience-CN'
+category: "ComputerScience"
 draft: true 
 lang: zh_CN
 ---

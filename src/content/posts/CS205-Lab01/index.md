@@ -5,7 +5,7 @@ updated: 2025-04-03
 description: 'Welcome to my CS205 lecture notes!'
 image: ''
 tags: [ComputerScience,ProgramDesign,Cpp,Ubuntu,Linux ]
-category: 'ComputerScience-En'
+category: "ComputerScience"
 draft: false 
 lang: en
 ---

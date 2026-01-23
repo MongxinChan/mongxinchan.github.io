@@ -31,3 +31,7 @@ yarn.lock
 # ide
 .idea
 *.iml
+
+# python处理
+main.py
+scan.py

@@ -5,7 +5,7 @@ updated: 2025-01-06
 description: '这一讲主要涉及常见的一些名词问题，以及如何构建一个项目。'
 image: ''
 tags: [ComputerScience]
-category: 'ComputerScience-CN'
+category: "ComputerScience"
 lang: zh_CN
 ---
 

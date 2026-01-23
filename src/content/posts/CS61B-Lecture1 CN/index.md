@@ -5,7 +5,7 @@ updated: 2024-12-03
 description: 'CS61B Lecture 1 CN，主要讲的是如何使用Java的基础语法，以及CS61B课程的介绍。'
 image: ''
 tags: [ComputerScience,DataStructures,Java ]
-category: 'ComputerScience-CN'
+category: "ComputerScience"
 lang: zh_CN
 ---
 > [!TIP]

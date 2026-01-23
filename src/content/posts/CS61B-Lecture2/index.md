@@ -5,7 +5,7 @@ updated: 2024-12-03
 description: 'The lecture shows some basic knowledge of Java.And the debugging of Java.'
 image: ''
 tags: [ComputerScience,DataStructures,Java ]
-category: 'ComputerScience-En'
+category: "ComputerScience"
 lang: en
 ---
 >[!TIP]

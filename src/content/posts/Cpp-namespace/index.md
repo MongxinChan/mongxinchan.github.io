@@ -5,7 +5,7 @@ updated: 2025-05-08
 description: '深入探讨C++命名空间(namespace)的机制、创建、使用方法（作用域解析、using指令、using声明）以及最佳实践，帮助开发者有效管理代码组织，避免命名冲突。' 
 image: '' 
 tags: [Cpp,ComputerScience]
-category: 'ComputerScience-CN'
+category: "ComputerScience"
 draft: false 
 lang: zh_CN
 ---

@@ -5,8 +5,8 @@ updated: 2025-05-08
 description: 'Java 是一种静态类型、面向对象的编程语言。理解其基本语法是学习 Java 的第一步。'
 image: ''
 tags: [ComputerScience, DataStructures, Java]
-category: 'ComputerScience-CN'
-lang: zh-CN
+category: "ComputerScience"
+lang: zh_CN
 ---
 > [!TIP]
 >

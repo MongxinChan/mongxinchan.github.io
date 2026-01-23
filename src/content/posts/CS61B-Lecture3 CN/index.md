@@ -5,7 +5,7 @@ updated: 2024-12-06
 description: '主要讲了引用类型'
 image: ''
 tags: [ComputerScience,DataStructures,Java ]
-category: 'ComputerScience-CN'
+category: "ComputerScience"
 lang: zh_CN
 ---
 > [!TIP]
