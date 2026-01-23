@@ -9,7 +9,7 @@ export let categories: string[] = [];
 export let sortedPosts: Post[] = [];
 
 // 1. 新增语言选择状态
-let selectedLang = "all"; 
+let selectedLang = "all";
 
 const params = new URLSearchParams(window.location.search);
 tags = params.has("tag") ? params.getAll("tag") : [];
@@ -17,92 +17,92 @@ categories = params.has("category") ? params.getAll("category") : [];
 const uncategorized = params.get("uncategorized");
 
 interface Post {
-    slug: string;
-    data: {
-        title: string;
-        tags: string[];
-        category?: string | null;
-        published: Date;
-        lang?: string; // ✅ 接口增加 lang 字段
-    };
+	slug: string;
+	data: {
+		title: string;
+		tags: string[];
+		category?: string | null;
+		published: Date;
+		lang?: string; // ✅ 接口增加 lang 字段
+	};
 }
 
 interface Group {
-    year: number;
-    posts: Post[];
+	year: number;
+	posts: Post[];
 }
 
 let groups: Group[] = [];
 
 function formatDate(date: Date) {
-    const month = (date.getMonth() + 1).toString().padStart(2, "0");
-    const day = date.getDate().toString().padStart(2, "0");
-    return `${month}-${day}`;
+	const month = (date.getMonth() + 1).toString().padStart(2, "0");
+	const day = date.getDate().toString().padStart(2, "0");
+	return `${month}-${day}`;
 }
 
 function formatTag(tagList: string[]) {
-    return tagList.map((t) => `#${t}`).join(" ");
+	return tagList.map((t) => `#${t}`).join(" ");
 }
 
 // 2. 将过滤逻辑封装为响应式函数
 function filterAndGroup() {
-    let filteredPosts: Post[] = sortedPosts;
+	let filteredPosts: Post[] = sortedPosts;
 
-    // 原有 标签 过滤
-    if (tags.length > 0) {
-        filteredPosts = filteredPosts.filter(
-            (post) =>
-                Array.isArray(post.data.tags) &&
-                post.data.tags.some((tag) => tags.includes(tag)),
-        );
-    }
+	// 原有 标签 过滤
+	if (tags.length > 0) {
+		filteredPosts = filteredPosts.filter(
+			(post) =>
+				Array.isArray(post.data.tags) &&
+				post.data.tags.some((tag) => tags.includes(tag)),
+		);
+	}
 
-    // 原有 分类 过滤
-    if (categories.length > 0) {
-        filteredPosts = filteredPosts.filter(
-            (post) => post.data.category && categories.includes(post.data.category),
-        );
-    }
+	// 原有 分类 过滤
+	if (categories.length > 0) {
+		filteredPosts = filteredPosts.filter(
+			(post) => post.data.category && categories.includes(post.data.category),
+		);
+	}
 
-    if (uncategorized) {
-        filteredPosts = filteredPosts.filter((post) => !post.data.category);
-    }
+	if (uncategorized) {
+		filteredPosts = filteredPosts.filter((post) => !post.data.category);
+	}
 
-    // ✅ 新增：语言过滤逻辑
-    if (selectedLang !== "all") {
-        filteredPosts = filteredPosts.filter((post) => {
-            // 如果文章没写 lang，默认为 zh_CN
-            const postLang = post.data.lang || "zh_CN";
-            return postLang === selectedLang;
-        });
-    }
+	// ✅ 新增：语言过滤逻辑
+	if (selectedLang !== "all") {
+		filteredPosts = filteredPosts.filter((post) => {
+			// 如果文章没写 lang，默认为 zh_CN
+			const postLang = post.data.lang || "zh_CN";
+			return postLang === selectedLang;
+		});
+	}
 
-    const grouped = filteredPosts.reduce(
-        (acc, post) => {
-            const year = post.data.published.getFullYear();
-            if (!acc[year]) acc[year] = [];
-            acc[year].push(post);
-            return acc;
-        },
-        {} as Record<number, Post[]>,
-    );
+	const grouped = filteredPosts.reduce(
+		(acc, post) => {
+			const year = post.data.published.getFullYear();
+			if (!acc[year]) acc[year] = [];
+			acc[year].push(post);
+			return acc;
+		},
+		{} as Record<number, Post[]>,
+	);
 
-    const groupedPostsArray = Object.keys(grouped).map((yearStr) => ({
-        year: Number.parseInt(yearStr, 10),
-        posts: grouped[Number.parseInt(yearStr, 10)],
-    }));
+	const groupedPostsArray = Object.keys(grouped).map((yearStr) => ({
+		year: Number.parseInt(yearStr, 10),
+		posts: grouped[Number.parseInt(yearStr, 10)],
+	}));
 
-    groupedPostsArray.sort((a, b) => b.year - a.year);
-    groups = groupedPostsArray;
+	groupedPostsArray.sort((a, b) => b.year - a.year);
+	groups = groupedPostsArray;
 }
 
 // 3. 监听选择变化并执行更新
 $: if (selectedLang || sortedPosts) {
-    filterAndGroup();
+	filterAndGroup();
 }
 
 onMount(async () => {
-    filterAndGroup();
+	filterAndGroup();
 });
 </script>
 
