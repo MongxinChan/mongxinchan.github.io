@@ -4,8 +4,8 @@ published: 2025-04-22
 updated: 2025-04-22
 description: '本规范继承Google的C++代码规范'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp]
-category: "ComputerScience"
+tags: [Cpp, StyleGuide, EngineeringStandard]
+category: "System-Dev"
 draft: false 
 lang: zh_CN
 ---

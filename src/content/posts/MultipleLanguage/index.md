@@ -2,8 +2,8 @@
 title: '二语习得——笔记'
 description: ''
 image: ''
-tags: [Language]
-category: '人文'
+tags: [Linguistic,Cognitive,Theory]
+category: "Philosophy"
 draft: false 
 lang: en
 published: 2025-08-30

@@ -4,8 +4,8 @@ published: 2025-03-25
 updated: 2025-04-07
 description: 'Vue.js 是一个用于构建用户界面的渐进式框架，它通过声明式的数据绑定和组件系统，简化了 DOM 操作和页面渲染。本教程将帮助你快速上手 Vue 2.0，并了解其基本概念和用法。'
 image: ''
-tags: [ComputerScience,Fronted,Vue ]
-category: "ComputerScience"
+category: "System-Dev"
+tags: [Frontend, Vue, TypeScript]
 draft: false 
 lang: zh_CN
 ---

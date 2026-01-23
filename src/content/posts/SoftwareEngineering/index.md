@@ -4,8 +4,8 @@ published: 2025-01-05
 updated: 2025-01-06
 description: '这一讲主要涉及常见的一些名词问题，以及如何构建一个项目。'
 image: ''
-tags: [ComputerScience]
-category: "ComputerScience"
+category: "CS-Basics"
+tags: [CS61B, SoftwareEngineering]
 lang: zh_CN
 ---
 

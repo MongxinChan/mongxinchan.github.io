@@ -4,8 +4,8 @@ published: 2024-12-02
 updated: 2024-12-03
 description: 'The lecture shows some basic knowledge of Java.And the debugging of Java.'
 image: ''
-tags: [ComputerScience,DataStructures,Java ]
-category: "ComputerScience"
+tags: [Java, CS61B, OOP, Debugging]
+category: "CS-Basics"
 lang: en
 ---
 >[!TIP]

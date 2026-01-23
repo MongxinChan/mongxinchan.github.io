@@ -4,8 +4,8 @@ published: 2025-05-08
 updated: 2025-05-31
 description: '数据结构是计算机存储、组织数据的方式。选择合适的数据结构对于设计高效的算法和程序至关重要。这一讲我们着重于链表的定义，如何优化，其变种，以及最重要的哨兵节点优化'
 image: 'images/linkedlist_common_types.png'
-tags: [ComputerScience, DataStructures, Java]
-category: "ComputerScience"
+tags: [DataStructures, Java, CS61B]
+category: "CS-Basics"
 lang: zh_CN
 ---
 

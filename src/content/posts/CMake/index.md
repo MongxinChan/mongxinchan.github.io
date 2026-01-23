@@ -4,8 +4,8 @@ published: 2024-11-23
 updated: 2024-11-23
 description: '`Makefile`跟系统的编译有很重要的相关，在不同的系统上`Makefile`编译出来的文件是不相同的，这时候对于我们跨平台解决问题有一个致命问题，好在我们有`CMake`来解决这一难题。'
 image: './img.png'
-tags: [ComputerScience,ProgramDesign,Cpp,Linux,Ubuntu ]
-category: "ComputerScience"
+tags: [CMake, BuildTools, Cpp, Linux] 
+category: "System-Dev"
 draft: false 
 lang: zh_CN
 ---

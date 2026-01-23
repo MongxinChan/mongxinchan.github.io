@@ -4,8 +4,8 @@ published: 2024-11-23
 updated: 2024-11-23
 description: '在面向对象编程中，多态是一种强大的特性，它允许我们通过基类的接口调用派生类的实现。C++ 中的虚函数（Virtual Function）是实现多态的关键机制。虚函数的设计理念源自于“重载函数”，但它们的目标和实现方式有所不同。重载函数主要用于编译时的多态（静态绑定），而虚函数则用于运行时的多态（动态绑定）。'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp ]
-category: "ComputerScience"
+category: "System-Dev"
+tags: [Cpp, MemoryManagement]
 draft: true 
 lang: zh_CN
 ---

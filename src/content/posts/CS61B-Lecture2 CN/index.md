@@ -4,8 +4,8 @@ published: 2024-12-03
 updated: 2024-12-04
 description: '这一讲介绍了类与其实例化，以及调试入门，我在后文提及了一下为什么会有面向对象编程，以及类，方法，实例的区别。'
 image: ''
-tags: [ComputerScience,DataStructures,Java ]
-category: "ComputerScience"
+tags: [Java, CS61B, OOP, Debugging]
+category: "CS-Basics"
 lang: zh_CN
 ---
 > [!TIP]

@@ -4,8 +4,8 @@ published: 2024-11-16
 updated: 2025-05-07  
 description: '为了兼容C语言并提供更简洁、更安全的内存操作方式，C++引入了引用的概念。本篇将介绍C++中的指针与引用，以及它们的一些常见用法和区别。' 
 image: '' 
-tags: [ComputerScience, ProgramDesign, Cpp] 
-category: "ComputerScience"
+category: "System-Dev"
+tags: [Cpp, MemoryManagement]
 draft: false 
 lang: zh_CN
 ---

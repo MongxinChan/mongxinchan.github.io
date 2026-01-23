@@ -4,8 +4,8 @@ published: 2024-11-22
 updated: 2024-11-23
 description: 'Lambda 表达式和函数对象是 C++11 引入的非常强大的特性，它们极大地简化了函数的定义和使用方式。就像一把多功能瑞士军刀，有了它们，我们可以在代码中更灵活地处理函数逻辑，无论是简单的回调函数，还是复杂的算法实现，都可以轻松应对。'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp ]
-category: "ComputerScience"
+tags: [Cpp, Lambda, FunctionalProgramming, Cpp11]
+category: "System-Dev"
 draft: false 
 lang: zh_CN
 ---

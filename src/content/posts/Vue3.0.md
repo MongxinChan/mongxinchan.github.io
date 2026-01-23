@@ -4,8 +4,8 @@ published: 2025-03-26
 updated: 2025-04-07
 description: 'Vue 3 是 Vue.js 的最新版本，它带来了性能提升、更好的 TypeScript 支持以及新的 Composition API 等特性。本教程是基于 Vue 3 的快速上手教程，帮助你快速掌握其核心语法和功能。'
 image: ''
-tags: [ComputerScience,Fronted,Vue ]
-category: "ComputerScience"
+category: "System-Dev"
+tags: [Frontend, Vue, TypeScript]
 draft: false 
 lang: zh_CN
 ---

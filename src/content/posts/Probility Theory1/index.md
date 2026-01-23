@@ -4,8 +4,8 @@ published: 2025-03-03
 updated: 2025-03-05
 description: '概率论和数学的其他课程可能不太一样，可能你前面学得数学分析，高等代数，高等几何什么的。但是概率论跟其他的课程味道不太一样，单是数学的内容基本上是差不多的，但是我讲这个概率论，你学完这个概率论之后，主要的收获应该是：你对你身边或者生活中的事情的看法有一个变化。'
 image: ''
-tags: [Probility,Math]
-category: 'Math'
+category: "Intelligence"
+tags: [Probability, Math]
 draft: true 
 lang: zh_CN
 ---

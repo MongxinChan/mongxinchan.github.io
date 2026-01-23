@@ -4,8 +4,8 @@ published: 2024-12-05
 updated: 2024-12-06
 description: '主要讲了引用类型'
 image: ''
-tags: [ComputerScience,DataStructures,Java ]
-category: "ComputerScience"
+tags: [DataStructures, Java, CS61B]
+category: "CS-Basics"
 lang: zh_CN
 ---
 > [!TIP]

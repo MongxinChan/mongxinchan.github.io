@@ -4,8 +4,8 @@ published: 2024-11-21
 updated: 2024-11-22
 description: '`Cpp` 的重载函数是依据于 `Argument-dependent lookup`（也称作 ADL），也就是说，即使有相同的函数名，但是我们也依据参数列表的不同来调用，这涉及到编译原理。我们知道，利用 `.cpp` 文件可以编译成 `.obj` 文件，再通过链接器链接变成 `.exe` 文件，而 `Cpp` 的重载特性就是从编译器下手的。'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp ]
-category: "ComputerScience"
+category: "System-Dev"
+tags: [Cpp, Polymorphism]
 draft: false 
 lang: zh_CN
 ---

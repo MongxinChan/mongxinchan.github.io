@@ -5,7 +5,7 @@ updated: 2026-01-22
 description: '算法不该是冷冰冰的公式，而是人类决策逻辑的自动化镜像。本文带你走进决策树的世界，用“找炸鸡店”的吃货逻辑解构信息熵、基尼指数与剪枝艺术。看透层层 if-else 背后，我们是如何在数据的杂音中，通过减熵来寻找那个既稳定又精准的“甜蜜点”。'
 image: '' 
 tags: [MachineLearning, DecisionTree, Algorithms, DataScience]
-category: MachineLearning
+category: Intelligence
 draft: false 
 lang: zh_CN
 ---
