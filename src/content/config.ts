@@ -9,7 +9,7 @@ const postsCollection = defineCollection({
 		description: z.string().optional().default(""),
 		image: z.string().optional().default(""),
 		tags: z.array(z.string()).optional().default([]),
-		category: z.string().optional().default(""),
+		category: z.string().optional().nullable().default(""),
 		lang: z.string().optional().default(""),
 
 		/* For internal use */
@@ -19,25 +19,10 @@ const postsCollection = defineCollection({
 		nextSlug: z.string().default(""),
 	}),
 });
-const musicCollection = defineCollection({
-	schema: z.object({
-		category: z.string(), // 添加分类字段
-		albums: z.array(
-			z.object({
-				title: z.string(),
-				artist: z.string(),
-				audio: z.string(), // 音频路径改为必填
-				cover: z.string().optional(),
-				rating: z.number().min(0).max(5).optional(),
-				review: z.string().optional(),
-				published: z.coerce.date().optional().default(new Date()),
-			}),
-		),
-	}),
+const specCollection = defineCollection({
+	schema: z.object({}),
 });
-
 export const collections = {
 	posts: postsCollection,
-	music: musicCollection,
-	// 新增spec集合
+	spec: specCollection,
 };

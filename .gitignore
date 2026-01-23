@@ -1,7 +1,6 @@
 # build output
 dist/
 
-
 # generated types
 .astro/
 
@@ -27,4 +26,8 @@ package-lock.json
 bun.lockb
 yarn.lock
 
+# vscode
 .vscode/
+# ide
+.idea
+*.iml
