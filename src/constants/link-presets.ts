@@ -16,7 +16,7 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		url: "/archive/",
 	},
 	[LinkPreset.Music]: {
-    name: "Music",
-    url: "/music/",
-  }
+		name: "Music",
+		url: "/music/",
+	},
 };
