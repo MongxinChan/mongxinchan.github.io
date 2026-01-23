@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 import path from "node:path";
 import License from "@components/misc/License.astro";
 import Markdown from "@components/misc/Markdown.astro";
@@ -11,10 +12,9 @@ import { Icon } from "astro-icon/components";
 import { licenseConfig } from "src/config";
 import ImageWrapper from "../../components/misc/ImageWrapper.astro";
 import PostMetadata from "../../components/PostMeta.astro";
+import SeriesNotice from "../../components/SeriesNotice.svelte";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
-import { getCollection } from "astro:content";
-import SeriesNotice from "../../components/SeriesNotice.svelte";
 
 // 1. 统一使用 entry，并获取所有文章用于系列关联
 export async function getStaticPaths() {
