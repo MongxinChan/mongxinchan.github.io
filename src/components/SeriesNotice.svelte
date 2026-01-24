@@ -21,7 +21,7 @@ const seriesKeywords = [
 	"CS61B",
 	"CS205",
 	"408",
-	"MechineLearning",
+	"MachineLearning",
 	"ComputerNetworks",
 	"Operating System",
 ];
