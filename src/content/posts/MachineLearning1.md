@@ -3,12 +3,14 @@ title: '机器学习笔记：绪论 —— 潮州牛肉摊里的归纳智慧'
 published: 2026-01-15 
 updated: 2026-01-31
 description: '借潮州牛肉火锅的“识肉”逻辑，解构周志华《机器学习》绪论核心概念：从经验到模型，从假设空间到归纳偏好。' 
-image: '' 
+image: 'https://cdn.jsdelivr.net/gh/MeritXin/img@master/image-20260131154729469.png' 
 tags: [MachineLearning,] 
 category: Intelligence
 draft: false 
 lang: zh_CN
 ---
+
+**Photo by CC**
 
 ## 前言
 
@@ -169,8 +171,6 @@ $$
 
 :::
 
-
-
 # 发展历程
 
 从“直觉识肉”到“智能选品”，机器学习经历了四个台阶：
@@ -208,3 +208,13 @@ $$
 以我的私心来看，我肯定会推荐*Pattern Recognition and Machine Learning (PRML)*,其概率视角的解释对理解底层模型非常有益
 
 :::
+
+
+
+## 致谢 / Acknowledgments
+
+这篇笔记的诞生，不仅是我个人在机器学习海洋里的探索，更离不开两位伙伴的支持：
+
+感谢 **锋锋** 在过去的两年多时间与我交流技术，切磋进步。关于**模型应该如何训练**的那些深夜探讨，是我不断迭代更新的由头之一。
+
+感谢 **CC** 为本文提供的精美配图，你拍摄的镜头下的潮州美食，能让我，也让这篇关于“脖仁”与“特征向量”的讨论，有了最真实的视觉温度。
