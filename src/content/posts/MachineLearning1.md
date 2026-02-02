@@ -32,7 +32,7 @@ lang: zh_CN
 
 简单来讲，其核心路径是：
 $$
-\text 数据 \rightarrow 学习算法 \rightarrow 模型 \rightarrow 预测/决策
+\text{数据} \rightarrow \text{学习算法} \rightarrow \text{模型} \rightarrow \text{预测/决策}
 $$
 在数学层面上，实际上就是在找一个**映射函数(Mapping function)$f$**：
 $$
