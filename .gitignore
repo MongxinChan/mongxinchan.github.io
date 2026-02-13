@@ -35,3 +35,6 @@ yarn.lock
 # python处理
 main.py
 scan.py
+
+# husky to prevent error-formating commit messages
+.husky/_
