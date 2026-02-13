@@ -12,6 +12,11 @@ lang: zh_CN
 
 ## 前言
 
+:::TIP[Materials]
+你可以点击以下链接来获取 `Agent Skills` 的资料：
+::github(repo="https-deeplearning-ai/sc-agent-skills-files")
+:::
+
 设想一个问题，帆帆用 `Gemini` 网页版来写自己的课程设计，如果他总是需要输入相似的 `Prompt` 指令来完成他的课程设计代码完善，那他是不是会花很多时间在修改 `Prompt` 或者编写自己的代码上？
 
 例如：
