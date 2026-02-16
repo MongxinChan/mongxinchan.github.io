@@ -22,7 +22,7 @@ lang: en
 
 在一个成熟的智能体架构中，`Skills` 并不是孤军奋战的。它需要与 `MCP`、`Tools` 和 `Subagents` 协同工作，形成一套完整的“数字员工”体系。
 
-![4.2.png](./4.2.png)
+![4.2.png](https://cdn.jsdelivr.net/gh/MeritXin/img@master/4.2.png)
 
 ## 1.1 核心组件的协同逻辑
 
@@ -52,6 +52,8 @@ lang: en
 
 ## 2.1 命名规范与触发逻辑
 
+![alt text](https://cdn.jsdelivr.net/gh/MeritXin/img@master/6.3.png)
+
 ### 2.1.1 命名规范 (Naming)
 
 - **格式要求**：采用「动词 + ing」的格式，例如 `generating-practice-questions` 或 `analyzing-time-series`。
@@ -64,6 +66,19 @@ lang: en
 
 - **关键词策略**：在描述中包含特定的关键词。例如，一个营销分析技能的描述应包含“转化漏斗”、“点击效率”等词汇，以显著提高 AI 的命中率。
 - **字数空间**：你有 1024 个字符的空间来详细定义输入要求和输出格式。
+
+![alt text](https://cdn.jsdelivr.net/gh/MeritXin/img@master/6.4.png)
+
+## 2.1.3 可选字段命名
+
+| 可选字段                        | 约束条件                               |
+| ------------------------------- | -------------------------------------- |
+| **license（许可证）**           | 许可证名称或对许可证文件的引用         |
+| **compatibility（兼容性）**     | 最多 500 个字符，指示环境要求          |
+| **metadata（元数据）**          | 任意键值对                             |
+| **allowed-tools（允许的工具）** | 预批准工具的空格分隔列表（实验性功能） |
+
+![alt text](https://cdn.jsdelivr.net/gh/MeritXin/img@master/6.5.png)
 
 ## 2.2 Agent 智能体生态组件对比表
 
