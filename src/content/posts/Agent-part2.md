@@ -1,7 +1,7 @@
 ---
 title: 'Agent —— 从Skills、MCP 到子代理的协作范式'
-published: 2026-02-12
-updated: 2026-02-12
+published: 2026-02-16
+updated: 2026-02-16
 description: '在本文章中，你将学习 `Skills` 是如何工作的，学习创建 `Skills` 的最佳实践，并为不同的用例构建 `Skills`，包括编码、研究和数据分析等。' 
 image: '' 
 tags: [Agent] 
@@ -11,7 +11,7 @@ lang: en
 ---
 :::TIP[Materials]
 你可以点击以下链接来获取 `Agent Skills` 的资料：
-::github(repo="https-deeplearning-ai/sc-agent-skills-files")
+::github{repo="https-deeplearning-ai/sc-agent-skills-files"}
 :::
 
 ## 前言
@@ -69,7 +69,7 @@ lang: en
 
 ![alt text](https://cdn.jsdelivr.net/gh/MeritXin/img@master/6.4.png)
 
-## 2.1.3 可选字段命名
+### 2.1.3 可选字段命名
 
 | 可选字段                        | 约束条件                               |
 | ------------------------------- | -------------------------------------- |
@@ -156,13 +156,13 @@ lang: en
 
 要高效地开发和测试这些技能，帆帆可以使用以下两个利器：
 
-### 6.1 Claude Desktop：Skill Creator
+## 6.1 Claude Desktop：Skill Creator
 
 这是一个本地迭代入口。通过开启 `Capabilities > Skill Creator`，你可以将本地修改后的 `Skill` 立即推送到 `Claude Desktop` 中进行试跑。
 
 - **最小闭环测试**：挑选官方 Skill -> 复制到本地 ->改一处 Prompt -> 触发 Update -> 输入样例 -> 观察行为。
 
-### 6.2 Claude Code：技能广场 (Marketplace)
+## 6.2 Claude Code：技能广场 (Marketplace)
 
 在 `Claude Code` 中，你可以通过 `/plugin` 进入 `Marketplace`，直接下载 Anthropic 官方提供的 `Office` 文档处理（docx/xlsx/pdf）等预设技能。
 
