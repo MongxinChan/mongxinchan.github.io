@@ -7,7 +7,7 @@ image: ''
 tags: [Agent] 
 category: Intelligence
 draft: false 
-lang: en
+lang: zh_CN
 ---
 :::TIP[Materials]
 你可以点击以下链接来获取 `Agent Skills` 的资料：
