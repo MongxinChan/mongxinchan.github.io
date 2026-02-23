@@ -49,10 +49,10 @@ export const navBarConfig: NavBarConfig = {
 		// 	name: "音乐", // 导航栏显示名称
 		// 	url: "/music/", // 对应页面路由
 		// },
-		{
-			name: "电影",
-			url: "/movie/",
-		},
+		// {
+		// 	name: "电影",
+		// 	url: "/movie/",
+		// },
 		// {
 		// 	name: "友链",
 		// 	url: "/links/",
@@ -64,7 +64,7 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "GitHub",
-			url: "https://github.com/saicaca/fuwari", // Internal links should not include the base path, as it is automatically added
+			url: "https://github.com/mongxinchan/mongxinchan.github.io", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 	],
