@@ -22,7 +22,19 @@ const postsCollection = defineCollection({
 const specCollection = defineCollection({
 	schema: z.object({}),
 });
+const moviesCollection = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		poster: z.string().optional().default(""),
+		genre: z.string().optional().default(""),
+		region: z.string().optional().default(""),
+		director: z.string().optional().default(""),
+		year: z.number().optional(),
+		date: z.date().optional(),
+	}),
+});
 export const collections = {
 	posts: postsCollection,
 	spec: specCollection,
+	movies: moviesCollection,
 };
