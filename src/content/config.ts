@@ -33,8 +33,26 @@ const moviesCollection = defineCollection({
 		date: z.date().optional(),
 	}),
 });
+const musicCollection = defineCollection({
+	schema: z.object({
+		title: z.string().optional().default(""),
+		description: z.string().optional().default(""),
+		category: z.string().optional().default("All"),
+		albums: z.array(
+			z.object({
+				title: z.string(),
+				artist: z.string(),
+				cover: z.string(),
+				audio: z.string(),
+				published: z.date().optional(),
+			})
+		).optional().default([]),
+	}),
+});
+
 export const collections = {
 	posts: postsCollection,
 	spec: specCollection,
 	movies: moviesCollection,
+	music: musicCollection,
 };
