@@ -1,0 +1,54 @@
+---
+import { getEntry, render } from "astro:content";
+import Markdown from "@components/misc/Markdown.astro";
+import { i18n } from "../i18n/translation";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+import FriendCard from "../components/FriendCard.astro";
+import { profileConfig, siteConfig } from "../config";
+import friendsData from "../config/friends.json";
+
+const linksPost = await getEntry("spec", "linking");
+
+if (!linksPost) {
+	throw new Error("Links page content not found");
+}
+
+const { Content } = await render(linksPost);
+---
+<MainGridLayout title="友链" description="友链">
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32 mb-4">
+        <div class="card-base z-10 px-9 py-6 relative w-full ">
+            <div class="text-2xl font-bold mb-4">本站资料</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <FriendCard 
+                    title={siteConfig.title} 
+                    url={Astro.site?.toString() || ""} 
+                    avatar={profileConfig.avatar || ""} 
+                    description={profileConfig.bio || siteConfig.subtitle || ""} 
+                    badge="My Site"
+                />
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32 mb-4">
+        <div class="card-base z-10 px-9 py-6 relative w-full ">
+            <div class="text-2xl font-bold mb-4">小伙伴们</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {friendsData.map((friend) => (
+                    <FriendCard 
+                        title={friend.title} 
+                        url={friend.url} 
+                        avatar={friend.avatar} 
+                        description={friend.description} 
+                        badge={friend.badge}
+                    />
+                ))}
+            </div>
+            
+            <Markdown class="mt-8">
+                <Content />
+            </Markdown>
+        </div>
+    </div>
+</MainGridLayout>
