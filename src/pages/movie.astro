@@ -1,23 +1,252 @@
 ---
-
-import { getEntry } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import Markdown from "@components/misc/Markdown.astro";
-import I18nKey from "../i18n/i18nKey";
-import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
+// Get the intro text from the existing spec entry
 const moviePost = await getEntry("spec", "movie");
-
-const { Content } = moviePost
+const { Content: Intro } = moviePost
 	? await moviePost.render()
-	: { Content: () => "Content not available" };
+	: { Content: () => "" };
+
+// Get all movies, sorted by date (newest first)
+const allMovies = await getCollection("movies");
+const sortedMovies = allMovies.sort((a, b) => {
+	const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
+	const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+	return dateB - dateA;
+});
+
+// Render each movie's body content
+const renderedMovies = await Promise.all(
+	sortedMovies.map(async (movie) => {
+		const { Content } = await movie.render();
+		return { ...movie, Content };
+	})
+);
+
+// Collect all unique filter values
+const allRegions = [...new Set(renderedMovies.map(m => m.data.region).filter(Boolean))];
+const allDirectors = [...new Set(renderedMovies.map(m => m.data.director).filter(Boolean))];
+const allYears = [...new Set(renderedMovies.map(m => m.data.year).filter(Boolean))].sort((a, b) => Number(b) - Number(a));
 ---
-<MainGridLayout title={i18n(I18nKey.about)} description={i18n(I18nKey.about)}>
-    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
-        <div class="card-base z-10 px-9 py-6 relative w-full ">
-            <Markdown class="mt-2">
-                <Content/>
-            </Markdown>
-        </div>
-    </div>
+
+<MainGridLayout title="Movie" description="Movies I've watched and reviewed">
+	{/* Page intro */}
+	<div class="card-base px-9 py-6 mb-6 w-full">
+		<Markdown>
+			<Intro />
+		</Markdown>
+	</div>
+
+	{/* Filter bar */}
+	<div id="movie-filters" class="card-base px-6 py-4 mb-6 w-full">
+		<div class="flex flex-wrap items-start gap-y-3 gap-x-6">
+			
+			{/* "All" reset button */}
+			<div class="flex items-center gap-2 flex-wrap">
+				<button
+					class="filter-btn active px-3 py-1 rounded-full text-sm font-medium transition-all"
+					data-filter-type="all"
+					data-filter-value="all"
+				>全部</button>
+			</div>
+
+			{/* Region filter */}
+			{allRegions.length > 0 && (
+				<div class="flex items-center gap-2 flex-wrap">
+					<span class="text-xs font-semibold text-[var(--primary)] uppercase tracking-wider min-w-fit">地区</span>
+					{allRegions.map(region => (
+						<button
+							class="filter-btn px-3 py-1 rounded-full text-sm font-medium transition-all"
+							data-filter-type="region"
+							data-filter-value={region}
+						>{region}</button>
+					))}
+				</div>
+			)}
+
+			{/* Director filter */}
+			{allDirectors.length > 0 && (
+				<div class="flex items-center gap-2 flex-wrap">
+					<span class="text-xs font-semibold text-[var(--primary)] uppercase tracking-wider min-w-fit">导演</span>
+					{allDirectors.map(director => (
+						<button
+							class="filter-btn px-3 py-1 rounded-full text-sm font-medium transition-all"
+							data-filter-type="director"
+							data-filter-value={director}
+						>{director}</button>
+					))}
+				</div>
+			)}
+
+			{/* Year filter */}
+			{allYears.length > 0 && (
+				<div class="flex items-center gap-2 flex-wrap">
+					<span class="text-xs font-semibold text-[var(--primary)] uppercase tracking-wider min-w-fit">年代</span>
+					{allYears.map(year => (
+						<button
+							class="filter-btn px-3 py-1 rounded-full text-sm font-medium transition-all"
+							data-filter-type="year"
+							data-filter-value={String(year)}
+						>{year}</button>
+					))}
+				</div>
+			)}
+		</div>
+
+		{/* Results count */}
+		<p id="movie-count" class="text-xs text-[var(--text-50)] mt-3">
+			共 {renderedMovies.length} 部
+		</p>
+	</div>
+
+	{/* Movie entries */}
+	<div id="movie-list" class="flex flex-col gap-8">
+		{renderedMovies.map(({ data, Content }) => (
+			<article
+				class="movie-card card-base overflow-hidden w-full transition-all duration-300"
+				data-region={data.region ?? ""}
+				data-director={data.director ?? ""}
+				data-year={data.year ? String(data.year) : ""}
+			>
+				{/* Layout: optional poster on right, content on left */}
+				<div class={`flex gap-0 ${data.poster ? 'flex-row' : ''}`}>
+					
+					{/* Main content area */}
+					<div class="flex-1 min-w-0 p-6 border-l-4 border-[var(--primary)] pl-6">
+						{/* Title */}
+						<h2 class="text-2xl font-bold text-[var(--text-90)] mb-3">{data.title}</h2>
+						
+						{/* Metadata tags */}
+						<div class="flex flex-wrap gap-x-6 gap-y-2 mb-5 text-sm text-[var(--text-50)]">
+							{data.genre && (
+								<span class="flex items-center gap-1">
+									<span class="font-medium text-[var(--primary)]">类型</span>
+									<span>{data.genre}</span>
+								</span>
+							)}
+							{data.region && (
+								<span class="flex items-center gap-1">
+									<span class="font-medium text-[var(--primary)]">地区</span>
+									<span>{data.region}</span>
+								</span>
+							)}
+							{data.director && (
+								<span class="flex items-center gap-1">
+									<span class="font-medium text-[var(--primary)]">导演</span>
+									<span>{data.director}</span>
+								</span>
+							)}
+							{data.year && (
+								<span class="flex items-center gap-1">
+									<span class="font-medium text-[var(--primary)]">年代</span>
+									<span>{data.year}</span>
+								</span>
+							)}
+						</div>
+
+						{/* Long-form review body */}
+						<Markdown class="text-[var(--text-70)] leading-relaxed">
+							<Content />
+						</Markdown>
+					</div>
+
+					{/* Poster image (optional, right side) */}
+					{data.poster && (
+						<div class="flex-shrink-0 w-44 hidden sm:block">
+							<img
+								src={data.poster}
+								alt={data.title}
+								class="w-full h-full object-cover"
+								loading="lazy"
+							/>
+						</div>
+					)}
+				</div>
+			</article>
+		))}
+	</div>
+
+	{/* Empty state */}
+	<div id="movie-empty" class="hidden card-base p-12 text-center text-[var(--text-50)] w-full">
+		没有找到符合条件的电影
+	</div>
 </MainGridLayout>
+
+<style>
+	.filter-btn {
+		background: var(--btn-regular-bg);
+		color: var(--text-70);
+		border: 1px solid transparent;
+		cursor: pointer;
+	}
+	.filter-btn:hover {
+		background: var(--btn-regular-bg-hover);
+		color: var(--text-90);
+	}
+	.filter-btn.active {
+		background: var(--primary);
+		color: white;
+		border-color: var(--primary);
+	}
+</style>
+
+<script>
+	const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+	const movieCards = document.querySelectorAll<HTMLElement>('.movie-card');
+	const countEl = document.getElementById('movie-count');
+	const emptyEl = document.getElementById('movie-empty');
+
+	let activeType = 'all';
+	let activeValue = 'all';
+
+	function applyFilter() {
+		let visible = 0;
+		movieCards.forEach(card => {
+			let show = false;
+			if (activeType === 'all') {
+				show = true;
+			} else {
+				const cardVal = card.dataset[activeType] ?? '';
+				// Support multi-value fields separated by " / "
+				const parts = cardVal.split(' / ').map(s => s.trim());
+				show = parts.some(p => p === activeValue || cardVal === activeValue);
+			}
+			card.style.display = show ? '' : 'none';
+			if (show) visible++;
+		});
+
+		if (countEl) {
+			countEl.textContent = `共 ${movieCards.length} 部${visible < movieCards.length ? `，当前筛选：${visible} 部` : ''}`;
+		}
+		if (emptyEl) {
+			emptyEl.classList.toggle('hidden', visible > 0);
+		}
+	}
+
+	filterBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const type = btn.dataset.filterType!;
+			const value = btn.dataset.filterValue!;
+
+			// Toggle off if clicking the same active button (except "all")
+			if (type === activeType && value === activeValue && type !== 'all') {
+				activeType = 'all';
+				activeValue = 'all';
+			} else {
+				activeType = type;
+				activeValue = value;
+			}
+
+			// Update button active states
+			filterBtns.forEach(b => {
+				const isAll = activeType === 'all' && b.dataset.filterType === 'all';
+				const isMatch = b.dataset.filterType === activeType && b.dataset.filterValue === activeValue;
+				b.classList.toggle('active', isAll || isMatch);
+			});
+
+			applyFilter();
+		});
+	});
+</script>
