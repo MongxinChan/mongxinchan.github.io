@@ -1,0 +1,119 @@
+---
+// This component provides a global music player using APlayer and MetingJS
+---
+
+<!-- APlayer CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" />
+<!-- APlayer JS -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- Meting JS -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
+<!-- 
+	Configuration:
+	server: netease (网易云), tencent (QQ音乐), kugou (酷狗), xiami (虾米), baidu (百度)
+	type: playlist (歌单), song (单曲), album (专辑), search (搜索), artist (歌手)
+	id: 音乐 ID / 歌单 ID (在此处替换为你自己的网易云歌单 ID)
+-->
+<div class="global-music-player" transition:persist="musicplayer">
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="17671400666"
+        fixed="true"
+        autoplay="false"
+        order="random"
+        theme="#oklch(0.75 0.14 var(--hue))">
+    </meting-js>
+</div>
+
+<style is:global>
+    /* Ensure APlayer has a high z-index and doesn't conflict with themes */
+    .aplayer {
+        z-index: 100 !important;
+    }
+    
+    /* Modify APlayer styles for better dark mode support if needed */
+    html.dark .aplayer {
+        background: var(--card-bg) !important;
+    }
+    html.dark .aplayer .aplayer-info .aplayer-music .aplayer-title {
+        color: var(--tw-prose-body) !important;
+    }
+    html.dark .aplayer .aplayer-info .aplayer-music .aplayer-author {
+        color: var(--tw-prose-body) !important;
+    }
+    html.dark .aplayer .aplayer-lrc:before,
+    html.dark .aplayer .aplayer-lrc:after {
+        background: transparent !important;
+    }
+    html.dark .aplayer .aplayer-list ul li {
+        border-top-color: var(--card-bg) !important;
+    }
+    html.dark .aplayer .aplayer-list ul li:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+    html.dark .aplayer .aplayer-list ul li.aplayer-list-light {
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+    html.dark .aplayer-miniswitch {
+        background: var(--card-bg) !important;
+    }
+    html.dark .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+        fill: var(--tw-prose-body) !important;
+    }
+    
+    /* Position lyrics just above the player on the left */
+    .aplayer.aplayer-fixed .aplayer-lrc {
+        bottom: 66px !important; /* Fixed player height is exactly 66px */
+        left: 0 !important;
+        text-align: left !important; 
+        width: 100% !important; /* Allow it to span normally to prevent squishing text lines */
+        margin: 0 !important;
+        padding: 10px 20px !important;
+        background: transparent !important;
+        pointer-events: none !important; /* Ensure lyrics don't block clicks to things behind them */
+    }
+    
+    /* Clean up lyric spacing and prevent overlapping/ghosting */
+    .aplayer .aplayer-lrc p {
+        visibility: hidden !important; /* Hide inactive lines completely to prevent clutter/overlapping */
+        height: 16px !important;
+        line-height: 16px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        opacity: 0 !important;
+    }
+    
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        visibility: visible !important;
+        opacity: 1 !important; /* Full opacity for active line */
+        font-size: 14px !important; 
+        color: #fff !important; 
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 0px 0px 2px rgba(0,0,0,0.8) !important; 
+        height: auto !important;
+        min-height: 16px !important;
+    }
+</style>
+
+<script is:inline>
+    // Monkey patch MetingJS to work gracefully with Astro View Transitions
+    // This prevents duplicate APlayer instances and music pausing during navigation
+    document.addEventListener('astro:page-load', () => {
+        if (window.MetingJSElement && !window.MetingJSElement.prototype.__patched) {
+            window.MetingJSElement.prototype.__patched = true;
+            
+            const originalConnected = window.MetingJSElement.prototype.connectedCallback;
+            window.MetingJSElement.prototype.connectedCallback = function() {
+                // Prevent duplicate initializations during page transitions
+                if (this.aplayer) return; 
+                originalConnected.call(this);
+            };
+            
+            window.MetingJSElement.prototype.disconnectedCallback = function() {
+                // Do not destroy the player on page navigation
+                // This keeps the music playing seamlessly and stops lyric overlaps
+            };
+        }
+    });
+</script>
