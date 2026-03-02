@@ -48,8 +48,8 @@ importers:
         specifier: ^1.2.4
         version: 1.2.4
       '@iconify-json/material-symbols':
-        specifier: ^1.2.58
-        version: 1.2.58
+        specifier: ^1.2.59
+        version: 1.2.59
       '@iconify/svelte':
         specifier: ^4.2.0
         version: 4.2.0(svelte@5.39.8)
@@ -1186,8 +1186,8 @@ packages:
   '@iconify-json/fa6-solid@1.2.4':
     resolution: {integrity: sha512-LmDNNdJVyvF5mPm1yxWvL8KjCc/E8LzoqnF1LNTVpyY2ZJRUlGOWuPIThdbuFBF2IovgttkIyumhyqfmlHdwKg==}
 
-  '@iconify-json/material-symbols@1.2.58':
-    resolution: {integrity: sha512-yPDXwGFNZ4Fq6O8NGbMGP7N4lVk8uX+oMwF3rIb6WRv6lID1W+pd9GN/KiM20rxZR36FjrG6TI5+x2LKLHdOnA==}
+  '@iconify-json/material-symbols@1.2.59':
+    resolution: {integrity: sha512-difuedW4jZyiDDu2SySjPCr+UsM65PRkEg3zUuKz0YRGMkNyBsk3R6j9s/ofP1NaKr2y32XxrzTawmnJZbzOAw==}
 
   '@iconify/svelte@4.2.0':
     resolution: {integrity: sha512-fEl0T7SAPonK7xk6xUlRPDmFDZVDe2Z7ZstlqeDS/sS8ve2uyU+Qa8rTWbIqzZJlRvONkK5kVXiUf9nIc+6OOQ==}
@@ -2903,6 +2903,7 @@ packages:
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   github-slugger@2.0.0:
@@ -6668,7 +6669,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/material-symbols@1.2.58':
+  '@iconify-json/material-symbols@1.2.59':
     dependencies:
       '@iconify/types': 2.0.0
 
