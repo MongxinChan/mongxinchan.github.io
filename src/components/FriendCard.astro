@@ -7,11 +7,12 @@ interface Props {
   url: string;
   avatar: string;
   description: string;
-  badge?: string;
+  badge?: string | string[];
   color?: string;
 }
 
 const { title, url, avatar, description, badge } = Astro.props;
+const badges = badge ? (Array.isArray(badge) ? badge : [badge]).filter(Boolean) : [];
 ---
 
 <a href={url} target="_blank" rel="noopener noreferrer" 
@@ -27,11 +28,11 @@ const { title, url, avatar, description, badge } = Astro.props;
       <h3 class="font-bold text-lg md:text-xl text-[var(--text-color)] truncate transition-colors duration-300 group-hover:text-[var(--primary)]">
         {title}
       </h3>
-      {badge && (
+      {badges.map((b) => (
         <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-[var(--primary)] text-white/90 shadow-sm">
-          {badge}
+          {b}
         </span>
-      )}
+      ))}
     </div>
     <p class="text-sm md:text-base text-[var(--text-muted)] line-clamp-2 leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
       {description}

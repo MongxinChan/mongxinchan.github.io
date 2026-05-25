@@ -53,10 +53,10 @@ export const navBarConfig: NavBarConfig = {
 		// 	name: "电影",
 		// 	url: "/movie/",
 		// },
-		// {
-		// 	name: "友链",
-		// 	url: "/links/",
-		// },
+		{
+			name: "友链",
+			url: "/links/",
+		},
 		{
 			name: "RSS",
 			url: "/rss.xml",
