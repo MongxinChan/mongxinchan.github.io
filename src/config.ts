@@ -1,4 +1,5 @@
 import type {
+	ExpressiveCodeConfig,
 	LicenseConfig,
 	NavBarConfig,
 	ProfileConfig,
@@ -48,14 +49,14 @@ export const navBarConfig: NavBarConfig = {
 		// 	name: "音乐", // 导航栏显示名称
 		// 	url: "/music/", // 对应页面路由
 		// },
-		{
-			name: "电影",
-			url: "/movie/",
-		},
 		// {
-		// 	name: "友链",
-		// 	url: "/links/",
+		// 	name: "电影",
+		// 	url: "/movie/",
 		// },
+		{
+			name: "友链",
+			url: "/links/",
+		},
 		{
 			name: "RSS",
 			url: "/rss.xml",
@@ -63,7 +64,7 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "GitHub",
-			url: "https://github.com/saicaca/fuwari", // Internal links should not include the base path, as it is automatically added
+			url: "https://github.com/mongxinchan/mongxinchan.github.io", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 	],
@@ -99,4 +100,10 @@ export const licenseConfig: LicenseConfig = {
 	enable: true,
 	name: "CC BY-NC-SA 4.0",
 	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+};
+
+export const expressiveCodeConfig: ExpressiveCodeConfig = {
+	// Note: Some styles (such as background color) are being overridden, see the astro.config.mjs file.
+	// Please select a dark theme, as this blog theme currently only supports dark background color
+	theme: "github-dark",
 };

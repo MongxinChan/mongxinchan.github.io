@@ -4,8 +4,8 @@ published: 2025-04-29
 updated: 2025-05-01
 description: '关于C++指针的应用，内存管理，以及valgrind的应用，大小端存储的介绍'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp,Ubuntu,Linux ]
-category: 'ComputerScience-En'
+tags: [Cpp,Linux,CS205]
+category: "System-Dev"
 draft: false 
 lang: en
 ---

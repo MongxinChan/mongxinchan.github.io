@@ -4,8 +4,8 @@ published: 2025-05-06
 updated: 2025-05-12
 description: '主要涉及静态库的编译，以及参数的传递'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp,Ubuntu,Linux ]
-category: 'ComputerScience-En'
+tags: [Cpp,Linux,CS205]
+category: "System-Dev"
 draft: false 
 lang: en
 ---

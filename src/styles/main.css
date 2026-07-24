@@ -110,22 +110,6 @@
     .btn-regular-dark.success {
         @apply bg-[oklch(0.75_0.14_var(--hue))] dark:bg-[oklch(0.75_0.14_var(--hue))]
     }
-
-    .copy-btn-icon {
-        @apply absolute top-1/2 left-1/2 transition -translate-x-1/2 -translate-y-1/2
-    }
-    .copy-btn .copy-icon {
-        @apply opacity-100 fill-white dark:fill-white/75
-    }
-    .copy-btn.success .copy-icon {
-        @apply opacity-0 fill-[var(--deep-text)]
-    }
-    .copy-btn .success-icon {
-        @apply opacity-0
-    }
-    .copy-btn.success .success-icon {
-        @apply opacity-100
-    }
 }
 
 .custom-md img, #post-cover img {
@@ -156,16 +140,13 @@
     height: var(--collapsedHeight);
 }
 
-/* 添加在文件末尾 */
-.horizontal-player {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-}
+.custom-md spoiler {
+  @apply bg-[var(--codeblock-bg)] hover:bg-transparent px-1 py-0.5 overflow-hidden rounded-md transition-all duration-150;
 
-.horizontal-player img {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  &:not(:hover) {
+    color: var(--codeblock-bg);
+    * {
+        color: var(--codeblock-bg);
+    }
+  }
 }

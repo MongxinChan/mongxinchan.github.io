@@ -4,8 +4,8 @@ published: 2025-04-23
 updated: 2025-04-27
 description: '本文强调所学Linux操作系统的指令，这些指令可以帮助我们快速熟悉Linux/Ubuntu操作系统。'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp,Ubuntu,Linux ]
-category: 'ComputerScience-En'
+tags: [Cpp,Linux,CS205]
+category: "System-Dev"
 draft: false 
 lang: en
 ---
@@ -95,7 +95,7 @@ If the path starts with slash "/", the first slash denotes root. The rest of the
 >
 > 用`\`虽然说在md格式下是可行的，但是还是不符合Astro框架下的文件引用，因为这件事我很多次博客部署失败...
 
-![image-20250427213815128](./images/pathAbsoluteOrRelative.png)
+![image-20250427213815128](https://cdn.jsdelivr.net/gh/MeritXin/img@master/pathAbsoluteOrRelative.png)
 
 The one is **`aboslute path`**,because it include `/root/` directory(In Linux it means start).
 
@@ -115,11 +115,11 @@ Use the **pwd** command to display the current working directory you are in.
 
 Start Ubuntu, you will see:
 
-![image-20250427220327969](./images/pwdCommands.png)
+![image-20250427220327969](https://cdn.jsdelivr.net/gh/MeritXin/img@master/pwdCommands.png)
 
 **$** or **#** is the prompt, you can type command now.
 
-![image-20250427220141981](./images/pwdCommands2.png)
+![image-20250427220141981](https://cdn.jsdelivr.net/gh/MeritXin/img@master/pwdCommands2.png)
 
 `/mnt/d/manage` means the current directory.
 
@@ -127,7 +127,7 @@ Start Ubuntu, you will see:
 
 To navigate through the Linux files and directories, use the **cd** command. 
 
-![image-20250427220520360](./images/cdCommands2.png)
+![image-20250427220520360](https://cdn.jsdelivr.net/gh/MeritXin/img@master/cdCommands2.png)
 
 you can use the below command to open the directory:
 
@@ -137,7 +137,7 @@ cd /mnt/d
 
 It means you use the `absolute path` to open the directory，**change the directory to the root directory of d drive**
 
-![image-20250427220858396](./images/cdCommands3.png)
+![image-20250427220858396](https://cdn.jsdelivr.net/gh/MeritXin/img@master/cdCommands3.png)
 
 ```bash
 cd /root/
@@ -151,7 +151,7 @@ change the directory to the `root` directory，`root` means the adminitor files�
 
 
 
-![image-20250427221937654](./images/cdCommands.png)
+![image-20250427221937654](https://cdn.jsdelivr.net/gh/MeritXin/img@master/cdCommands.png)
 
 ```bash
 cd /
@@ -159,7 +159,7 @@ cd /
 
 change the directory to the `root` directory.
 
-![image-20250427221921303](./images/cdCommands4.png)
+![image-20250427221921303](https://cdn.jsdelivr.net/gh/MeritXin/img@master/cdCommands4.png)
 
 ```bash
 cd ~
@@ -184,11 +184,11 @@ The **ls** command lists files and directories within a system. Running it witho
 
 And you see I used it in `cd` command.
 
-![image-20250427221937654](./images/cdCommands.png)
+![image-20250427221937654](https://cdn.jsdelivr.net/gh/MeritXin/img@master/cdCommands.png)
 
 You can see `ls`:
 
-![image-20250427222434045](./images/lsCommandsDetails.png)
+![image-20250427222434045](https://cdn.jsdelivr.net/gh/MeritXin/img@master/lsCommandsDetails.png)
 
 Here are some options you can use with the **ls** command:
 
@@ -200,7 +200,7 @@ Here are some options you can use with the **ls** command:
 
 Use the **`mkdir`** command to **create one or multiple directories at once**. 
 
-![image-20250427222951510](./images/mkdir.png)
+![image-20250427222951510](https://cdn.jsdelivr.net/gh/MeritXin/img@master/mkdir.png)
 
 > [!NOTE]
 >
@@ -210,13 +210,13 @@ Use the **`mkdir`** command to **create one or multiple directories at once**.
 
 Use the **`rmdir`** command to permanently delete an **`empty directory`**.
 
-![image-20250427223139078](./images/rmdirCommands.png)
+![image-20250427223139078](https://cdn.jsdelivr.net/gh/MeritXin/img@master/rmdirCommands.png)
 
 ### 1.1.7 **rm** command
 
 The **`rm`** command is used to **`delete files within a directory`**. Make sure that the user performing this command has write permissions.
 
-![image-20250427223209929](./images/rmCommands.png)
+![image-20250427223209929](https://cdn.jsdelivr.net/gh/MeritXin/img@master/rmCommands.png)
 
 ```bash
 rm test.txt hello
@@ -234,7 +234,7 @@ Here are some acceptable options you can add:
 
 The **`cp`** command is used to copy a file or directory.
 
-![image-20250427223239394](./images/cpCommands.png)
+![image-20250427223239394](https://cdn.jsdelivr.net/gh/MeritXin/img@master/cpCommands.png)
 
 ```bash
 cp main.cpp test
@@ -242,9 +242,9 @@ cp main.cpp test
 
 The **mv** command is used to move a file or a directory form one location to another location.
 
-![image-20250427223256136](./images/cpCommands2.png)
+![image-20250427223256136](https://cdn.jsdelivr.net/gh/MeritXin/img@master/cpCommands2.png)
 
-![image-20250427223301731](./images/cpCommands3.png)
+![image-20250427223301731](https://cdn.jsdelivr.net/gh/MeritXin/img@master/cpCommands3.png)
 
 ```bash
 mv A B
@@ -262,7 +262,7 @@ menas that: Moving A into B and Renaming its name:C;
 
 Concatenate, or **`cat`**, is one of the most frequently used Linux commands. It lists, combines, and writes file content to the standard output. To run the cat command, type **cat** followed by the file name and its extension. 
 
-![image-20250427224904763](./images/catCommands.png)
+![image-20250427224904763](https://cdn.jsdelivr.net/gh/MeritXin/img@master/catCommands.png)
 
 Here are other ways to use the cat command:
 
@@ -290,27 +290,27 @@ Here are other ways to use the cat command:
 >
 > The exit status of the last command is available in the special parameter **$?**
 
-![image-20250427225330993](./images/utiliseOfCommands.png)
+![image-20250427225330993](https://cdn.jsdelivr.net/gh/MeritXin/img@master/utiliseOfCommands.png)
 
 ### 1.2.2 pipelines
 
 - A pipeline is a sequence of one or more commands separated by one of the control operators `|` or `|&`.
 - The output of each command in the pipeline is connected via a pipe to the input of the next command. That is, each command reads the previous command’s output. This connection is performed before any redirections specified by command1.
 
-![image-20250427225537908](./images/utiliseCommands2.png)
+![image-20250427225537908](https://cdn.jsdelivr.net/gh/MeritXin/img@master/utiliseCommands2.png)
 
-![image-20250427225542866](./images/utiliseCommands3.png)
+![image-20250427225542866](https://cdn.jsdelivr.net/gh/MeritXin/img@master/utiliseCommands3.png)
 
 ### **TIPS: Shortcut keys**
 
 1. **`Up`** and **down** arrow keys can list the commands you typed.
 2. **`Tab`** key can complete the command. For a long command, you can type first few letters and press Tab key to complete the command or list alternate commands.
 
-![image-20250427225604450](./images/shortcutKey1.png)
+![image-20250427225604450](https://cdn.jsdelivr.net/gh/MeritXin/img@master/shortcutKey1.png)
 
 **`clear`** is a standard Unix computer operating system command that is used to clear the terminal screen.
 
-![image-20250427225610366](./images/shortcutKey2.png)
+![image-20250427225610366](https://cdn.jsdelivr.net/gh/MeritXin/img@master/shortcutKey2.png)
 
 # gcc & g++
 
@@ -322,7 +322,7 @@ Type command **gcc** or **g++ --help**, you can get the common options of the gc
 
 mostly the same options as **gcc**.
 
-![image-20250427225829509](./images/gccAndG++.png)
+![image-20250427225829509](https://cdn.jsdelivr.net/gh/MeritXin/img@master/gccAndG%2B%2B.png)
 
 **-c**  Compile or assemble the source files, but do not link. The ultimate output is in the form of an object file for each source file. The object file name for a source file is made by replacing the suffix **.c** with **.o**.
 
@@ -334,7 +334,7 @@ mostly the same options as **gcc**.
 
 **we use `gcc source_file.c -o program_name`   or   `gcc source_file.o -o program_name` to compile the c&cpp files.**
 
-![image-20250427230010354](./images/processOfCompile.png)
+![image-20250427230010354](https://cdn.jsdelivr.net/gh/MeritXin/img@master/processOfCompile.png)
 
 **With one step to generate an executable target file:** 
 
@@ -353,7 +353,7 @@ int main()
 }
 ```
 
-![image-20250427230049814](./images/processOfCompile1.png)
+![image-20250427230049814](https://cdn.jsdelivr.net/gh/MeritXin/img@master/processOfCompile1.png)
 
 ## **2.1 compile multiple files**
 
@@ -401,7 +401,7 @@ int main()
 
 ```
 
-![image-20250427230604864](./images/processOfCompile2.png)
+![image-20250427230604864](https://cdn.jsdelivr.net/gh/MeritXin/img@master/processOfCompile2.png)
 
 # Makefile
 
@@ -415,9 +415,9 @@ And if you wanna know the example you can [click here come to my github repo rea
 
 Normally, you can compile these files by the following command:
 
-![image-20250427234147274](./images/makefileSuccessful.png)
+![image-20250427234147274](https://cdn.jsdelivr.net/gh/MeritXin/img@master/makefileSuccessful.png)
 
-![image-20250427234400326](./images/makefileSuccessful2.png)
+![image-20250427234400326](https://cdn.jsdelivr.net/gh/MeritXin/img@master/makefileSuccessful2.png)
 
 How about if there are hundreds of files to compile? If only one source file is modified, need we compile all the files? Makefile will help you.
 
@@ -429,45 +429,45 @@ The name of makefile must be either **makefile** or **Makefile** without extensi
 
 A makefile consists of a set of rules. A rule including three elements: **target**,**prerequisites** and **commands**. 
 
-![image-20250427234233492](./images/targetsPrerequisites.png)
+![image-20250427234233492](https://cdn.jsdelivr.net/gh/MeritXin/img@master/targetsPrerequisites.png)
 
 1. The **target** is an object file, which is generated by a program. Typically, there is only one per rule.
 2. The **prerequisites** are file names, separated by spaces, as input to create the target.
 3. The **commands** are a series of steps that make carries out. These need to start with a **tab character**, not spaces.
 
-![image-20250427234333806](./images/writeMakefile.png)
+![image-20250427234333806](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile.png)
 
 Type the command **make** in VScode
 
-![image-20250427234527147](./images/writeMakefile1.png)
+![image-20250427234527147](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile1.png)
 
 If you don’t install make in VScode, the information will display on the screen. 
 
-![image-20250427234557353](./images/writeMakefile2.png)
+![image-20250427234557353](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile2.png)
 
 ## **3.1 Define Macros/Variables in the** **makefile**
 
 To improve the efficiency of the **makefile**, we use variables.
 
-![image-20250427235549000](./images/writeMakefile3.png)
+![image-20250427235549000](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile3.png)
 
 start with <TAB> Write target, prerequisite and commands by variables using `$()`
 
-![image-20250427235621941](./images/writeMakefile4.png)
+![image-20250427235621941](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile4.png)
 
 > [!NOTE]
 >
 > Deletes all the .o files and executable file created previously before using make command. Otherwise, it’ll display: 
 >
-> ![image-20250427235639914](./images/writeMakefile5.png)
+> ![image-20250427235639914](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile5.png)
 
 If only one source file is modified, we need not compile all the files. So, let's modify the makefile.
 
-![image-20250427235839514](./images/writeMakefile6.png)
+![image-20250427235839514](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile6.png)
 
 If main.cpp is modified, it is compiled by make.
 
-![image-20250427235854370](./images/writeMakefile-7.png)
+![image-20250427235854370](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile-7.png)
 
 **All** the .cpp files are compiled to the .o files, so we can modify the makefile like this:
 
@@ -546,7 +546,7 @@ Because **clean** is a label not a target, the command **make clean** can execut
 
 **Functions in** **makefile**
 
-![image-20250428002819586](./images/writeMakefile-8.png)
+![image-20250428002819586](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile-8.png)
 
 ~~~makefile
 SRC=$(wildcard ./*.cpp)$
@@ -554,13 +554,13 @@ target:
 	@echo $(SRC)$
 ~~~
 
-![image-20250428002909488](./images/writeMakefile9-.png)
+![image-20250428002909488](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile9-.png)
 
 **patsubst**(pattern substitution): replace file  
 
 $(**patsubst** original pattern, target pattern, file list)
 
-![image-20250428003000540](./images/writeMakefile10.png)
+![image-20250428003000540](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile10.png)
 
 ```makefile
 SRC = $(wildcard ./*.cpp)$
@@ -570,7 +570,7 @@ target:
 	@echo $(OBJ)
 ```
 
-![image-20250428003131619](./images/writeMakefile7.png)
+![image-20250428003131619](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile7.png)
 
 ## 3.3 OBJS vs OBJ
 
@@ -584,7 +584,7 @@ Vs
 OBJ=main.o printinfo.o factorial.o
 ~~~
 
-![image-20250428003303903](./images/writeMakefile8.png)
+![image-20250428003303903](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile8.png)
 
 > [!TIP]
 >
@@ -604,11 +604,11 @@ You can click here to learn more:
 
 [Optional details from csdn](https://blog.csdn.net/xinianbuxiu/article/details/51844994)
 
-![image-20250428003448307](./images/writeMakefile9.png)
+![image-20250428003448307](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile9.png)
 
-![image-20250428003457952](./images/writeMakefile11.png)
+![image-20250428003457952](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile11.png)
 
-![image-20250428003508092](./images/writeMakefile12.png)
+![image-20250428003508092](https://cdn.jsdelivr.net/gh/MeritXin/img@master/writeMakefile12.png)
 
 [GNU Make Manual](http://www.gnu.org/software/make/manual/make.html)
 
@@ -617,7 +617,7 @@ You can click here to learn more:
 ## 4.1 **Exercises . commands and command list**
 
 The existing directory structure is shown in the upper right image. There are different types of C/C++files in the `p1` directory while the directory structure under p2 is unknown.
- ![image-20250428095913754](./images/exercise1.png)
+ ![image-20250428095913754](https://cdn.jsdelivr.net/gh/MeritXin/img@master/exercise1.png)
 
 > [!IMPORTANT]
 >
@@ -633,7 +633,7 @@ The existing directory structure is shown in the upper right image. There are di
 
 **My implements:**
 
-![image-20250428234625985](./images/implements2.png)
+![image-20250428234625985](https://cdn.jsdelivr.net/gh/MeritXin/img@master/implements2.png)
 
 or use this:
 
@@ -648,13 +648,13 @@ cp -u ../lab/main.cpp src/ && \
 cp -u ../lab/printhello.cpp src/
 ```
 
-![image-20250429005017531](./images/implements1.png)
+![image-20250429005017531](https://cdn.jsdelivr.net/gh/MeritXin/img@master/implements1.png)
 
 ## 4.2 **Exercises . Makefile and make**
 
 create a makefile, run it by command `make` or `make clean` to complete following tasks:
 
-![image-20250428095927958](./images/exercise2.png)
+![image-20250428095927958](https://cdn.jsdelivr.net/gh/MeritXin/img@master/exercise2.png)
 
 1. compile your project(program) or only compile the update files in the project by running `make`based on makefile to generate the executable file `lab3_practice`.
 
@@ -718,7 +718,7 @@ create a makefile, run it by command `make` or `make clean` to complete followin
     }
     ```
     
-    ![image-20250429233528023](./images/successfulMakefile12.png)
+    ![image-20250429233528023](https://cdn.jsdelivr.net/gh/MeritXin/img@master/successfulMakefile12.png)
 
 ## 4.3 **Exercises** . Run the following source code and explain the result.
 

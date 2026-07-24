@@ -9,7 +9,7 @@ const postsCollection = defineCollection({
 		description: z.string().optional().default(""),
 		image: z.string().optional().default(""),
 		tags: z.array(z.string()).optional().default([]),
-		category: z.string().optional().default(""),
+		category: z.string().optional().nullable().default(""),
 		lang: z.string().optional().default(""),
 
 		/* For internal use */
@@ -19,25 +19,40 @@ const postsCollection = defineCollection({
 		nextSlug: z.string().default(""),
 	}),
 });
+const specCollection = defineCollection({
+	schema: z.object({}),
+});
+const moviesCollection = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		poster: z.string().optional().default(""),
+		genre: z.string().optional().default(""),
+		region: z.string().optional().default(""),
+		director: z.string().optional().default(""),
+		year: z.number().optional(),
+		date: z.date().optional(),
+	}),
+});
 const musicCollection = defineCollection({
 	schema: z.object({
-		category: z.string(), // 添加分类字段
+		title: z.string().optional().default(""),
+		description: z.string().optional().default(""),
+		category: z.string().optional().default("All"),
 		albums: z.array(
 			z.object({
 				title: z.string(),
 				artist: z.string(),
-				audio: z.string(), // 音频路径改为必填
-				cover: z.string().optional(),
-				rating: z.number().min(0).max(5).optional(),
-				review: z.string().optional(),
-				published: z.coerce.date().optional().default(new Date()),
-			}),
-		),
+				cover: z.string(),
+				audio: z.string(),
+				published: z.date().optional(),
+			})
+		).optional().default([]),
 	}),
 });
 
 export const collections = {
 	posts: postsCollection,
+	spec: specCollection,
+	movies: moviesCollection,
 	music: musicCollection,
-	// 新增spec集合
 };

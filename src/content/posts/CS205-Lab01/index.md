@@ -4,8 +4,8 @@ published: 2025-03-18
 updated: 2025-04-03
 description: 'Welcome to my CS205 lecture notes!'
 image: ''
-tags: [ComputerScience,ProgramDesign,Cpp,Ubuntu,Linux ]
-category: 'ComputerScience-En'
+tags: [Cpp,Linux,CS205]
+category: "System-Dev"
 draft: false 
 lang: en
 ---

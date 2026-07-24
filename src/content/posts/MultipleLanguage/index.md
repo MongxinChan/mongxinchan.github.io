@@ -2,10 +2,10 @@
 title: '二语习得——笔记'
 description: ''
 image: ''
-tags: [Language]
-category: '人文'
+tags: [Linguistics]
+category: "Philosophy"
 draft: false 
-lang: zh_CN
+lang: en
 published: 2025-08-30
 ---
 

@@ -1,7 +1,6 @@
 # build output
 dist/
 
-
 # generated types
 .astro/
 
@@ -27,4 +26,15 @@ package-lock.json
 bun.lockb
 yarn.lock
 
+# vscode
 .vscode/
+# ide
+.idea
+*.iml
+
+# python处理
+main.py
+scan.py
+
+# husky to prevent error-formating commit messages
+.husky/_
