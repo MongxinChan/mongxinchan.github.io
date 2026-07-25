@@ -6,7 +6,7 @@ description: '2026实际上写了不少文章但是很少发表在博客上，�
 image: '' 
 tags: [Philosophy]
 category: Announcement
-draft: true 
+draft: false
 lang: zh_CN
 ---
 2026实际上写了不少文章但是很少发表在博客上，我觉得也需要调整一下。
